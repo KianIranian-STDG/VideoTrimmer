@@ -1,45 +1,45 @@
 -- Merging decision tree log ---
 manifest
-ADDED from D:\merge\VideoTrimmer\src\main\AndroidManifest.xml:1:1-9:12
-INJECTED from D:\merge\VideoTrimmer\src\main\AndroidManifest.xml:1:1-9:12
-INJECTED from D:\merge\VideoTrimmer\src\main\AndroidManifest.xml:1:1-9:12
-INJECTED from D:\merge\VideoTrimmer\src\main\AndroidManifest.xml:1:1-9:12
-INJECTED from D:\merge\VideoTrimmer\src\main\AndroidManifest.xml:1:1-9:12
-INJECTED from D:\merge\VideoTrimmer\src\main\AndroidManifest.xml:1:1-9:12
-INJECTED from D:\merge\VideoTrimmer\src\main\AndroidManifest.xml:1:1-9:12
+ADDED from D:\Nazari\Git\VideoTrimmer\src\main\AndroidManifest.xml:1:1-9:12
+INJECTED from D:\Nazari\Git\VideoTrimmer\src\main\AndroidManifest.xml:1:1-9:12
+INJECTED from D:\Nazari\Git\VideoTrimmer\src\main\AndroidManifest.xml:1:1-9:12
+INJECTED from D:\Nazari\Git\VideoTrimmer\src\main\AndroidManifest.xml:1:1-9:12
+INJECTED from D:\Nazari\Git\VideoTrimmer\src\main\AndroidManifest.xml:1:1-9:12
+INJECTED from D:\Nazari\Git\VideoTrimmer\src\main\AndroidManifest.xml:1:1-9:12
+INJECTED from D:\Nazari\Git\VideoTrimmer\src\main\AndroidManifest.xml:1:1-9:12
 	package
-		ADDED from D:\merge\VideoTrimmer\src\main\AndroidManifest.xml:2:5-43
-		INJECTED from D:\merge\VideoTrimmer\src\main\AndroidManifest.xml
-		INJECTED from D:\merge\VideoTrimmer\src\main\AndroidManifest.xml
+		ADDED from D:\Nazari\Git\VideoTrimmer\src\main\AndroidManifest.xml:2:5-43
+		INJECTED from D:\Nazari\Git\VideoTrimmer\src\main\AndroidManifest.xml
+		INJECTED from D:\Nazari\Git\VideoTrimmer\src\main\AndroidManifest.xml
 	android:versionName
-		INJECTED from D:\merge\VideoTrimmer\src\main\AndroidManifest.xml
-		ADDED from D:\merge\VideoTrimmer\src\main\AndroidManifest.xml:1:1-9:12
-		INJECTED from D:\merge\VideoTrimmer\src\main\AndroidManifest.xml
+		INJECTED from D:\Nazari\Git\VideoTrimmer\src\main\AndroidManifest.xml
+		ADDED from D:\Nazari\Git\VideoTrimmer\src\main\AndroidManifest.xml:1:1-9:12
+		INJECTED from D:\Nazari\Git\VideoTrimmer\src\main\AndroidManifest.xml
 	android:versionCode
-		INJECTED from D:\merge\VideoTrimmer\src\main\AndroidManifest.xml
-		ADDED from D:\merge\VideoTrimmer\src\main\AndroidManifest.xml:1:1-9:12
-		INJECTED from D:\merge\VideoTrimmer\src\main\AndroidManifest.xml
+		INJECTED from D:\Nazari\Git\VideoTrimmer\src\main\AndroidManifest.xml
+		ADDED from D:\Nazari\Git\VideoTrimmer\src\main\AndroidManifest.xml:1:1-9:12
+		INJECTED from D:\Nazari\Git\VideoTrimmer\src\main\AndroidManifest.xml
 	xmlns:android
-		ADDED from D:\merge\VideoTrimmer\src\main\AndroidManifest.xml:1:11-69
+		ADDED from D:\Nazari\Git\VideoTrimmer\src\main\AndroidManifest.xml:1:11-69
 uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
-ADDED from D:\merge\VideoTrimmer\src\main\AndroidManifest.xml:4:3-79
+ADDED from D:\Nazari\Git\VideoTrimmer\src\main\AndroidManifest.xml:4:3-79
 	android:name
-		ADDED from D:\merge\VideoTrimmer\src\main\AndroidManifest.xml:4:20-76
+		ADDED from D:\Nazari\Git\VideoTrimmer\src\main\AndroidManifest.xml:4:20-76
 application
-ADDED from D:\merge\VideoTrimmer\src\main\AndroidManifest.xml:6:5-8:17
+ADDED from D:\Nazari\Git\VideoTrimmer\src\main\AndroidManifest.xml:6:5-8:17
 	android:allowBackup
-		ADDED from D:\merge\VideoTrimmer\src\main\AndroidManifest.xml:6:18-45
+		ADDED from D:\Nazari\Git\VideoTrimmer\src\main\AndroidManifest.xml:6:18-45
 uses-sdk
-INJECTED from D:\merge\VideoTrimmer\src\main\AndroidManifest.xml reason: use-sdk injection requested
-INJECTED from D:\merge\VideoTrimmer\src\main\AndroidManifest.xml
-INJECTED from D:\merge\VideoTrimmer\src\main\AndroidManifest.xml
-INJECTED from D:\merge\VideoTrimmer\src\main\AndroidManifest.xml
-INJECTED from D:\merge\VideoTrimmer\src\main\AndroidManifest.xml
+INJECTED from D:\Nazari\Git\VideoTrimmer\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from D:\Nazari\Git\VideoTrimmer\src\main\AndroidManifest.xml
+INJECTED from D:\Nazari\Git\VideoTrimmer\src\main\AndroidManifest.xml
+INJECTED from D:\Nazari\Git\VideoTrimmer\src\main\AndroidManifest.xml
+INJECTED from D:\Nazari\Git\VideoTrimmer\src\main\AndroidManifest.xml
 	android:targetSdkVersion
-		INJECTED from D:\merge\VideoTrimmer\src\main\AndroidManifest.xml
-		ADDED from D:\merge\VideoTrimmer\src\main\AndroidManifest.xml
-		INJECTED from D:\merge\VideoTrimmer\src\main\AndroidManifest.xml
+		INJECTED from D:\Nazari\Git\VideoTrimmer\src\main\AndroidManifest.xml
+		ADDED from D:\Nazari\Git\VideoTrimmer\src\main\AndroidManifest.xml
+		INJECTED from D:\Nazari\Git\VideoTrimmer\src\main\AndroidManifest.xml
 	android:minSdkVersion
-		INJECTED from D:\merge\VideoTrimmer\src\main\AndroidManifest.xml
-		ADDED from D:\merge\VideoTrimmer\src\main\AndroidManifest.xml
-		INJECTED from D:\merge\VideoTrimmer\src\main\AndroidManifest.xml
+		INJECTED from D:\Nazari\Git\VideoTrimmer\src\main\AndroidManifest.xml
+		ADDED from D:\Nazari\Git\VideoTrimmer\src\main\AndroidManifest.xml
+		INJECTED from D:\Nazari\Git\VideoTrimmer\src\main\AndroidManifest.xml
