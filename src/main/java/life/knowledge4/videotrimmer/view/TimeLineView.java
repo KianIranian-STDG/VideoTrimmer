@@ -106,8 +106,8 @@ public class TimeLineView extends View {
 
                     mediaMetadataRetriever.release();
                     returnBitmaps(thumbnailList);
-                } catch (final Throwable e) {
-                    Thread.getDefaultUncaughtExceptionHandler().uncaughtException(Thread.currentThread(), e);
+                } catch (Exception e) {
+                    //Thread.getDefaultUncaughtExceptionHandler().uncaughtException(Thread.currentThread(), e);
                 }
             }
         });
