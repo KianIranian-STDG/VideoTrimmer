@@ -1,0 +1,42 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="life.knowledge4.videotrimmer.test" >
+4
+5    <uses-sdk
+5-->D:\Nazari\Git\VideoTrimmer\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger6794450121615845153.xml:5:5-74
+6        android:minSdkVersion="16"
+6-->D:\Nazari\Git\VideoTrimmer\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger6794450121615845153.xml:5:15-41
+7        android:targetSdkVersion="28" />
+7-->D:\Nazari\Git\VideoTrimmer\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger6794450121615845153.xml:5:42-71
+8
+9    <instrumentation
+9-->D:\Nazari\Git\VideoTrimmer\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger6794450121615845153.xml:11:5-15:83
+10        android:name="android.support.test.runner.AndroidJUnitRunner"
+10-->D:\Nazari\Git\VideoTrimmer\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger6794450121615845153.xml:11:22-83
+11        android:functionalTest="false"
+11-->D:\Nazari\Git\VideoTrimmer\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger6794450121615845153.xml:14:22-52
+12        android:handleProfiling="false"
+12-->D:\Nazari\Git\VideoTrimmer\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger6794450121615845153.xml:13:22-53
+13        android:label="Tests for life.knowledge4.videotrimmer.test"
+13-->D:\Nazari\Git\VideoTrimmer\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger6794450121615845153.xml:15:22-81
+14        android:targetPackage="life.knowledge4.videotrimmer.test" />
+14-->D:\Nazari\Git\VideoTrimmer\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger6794450121615845153.xml:12:22-79
+15
+16    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+16-->[__tested_artifact__::] D:\Nazari\Git\VideoTrimmer\build\intermediates\library_manifest\debug\AndroidManifest.xml:11:5-81
+16-->[__tested_artifact__::] D:\Nazari\Git\VideoTrimmer\build\intermediates\library_manifest\debug\AndroidManifest.xml:11:22-78
+17
+18    <application
+18-->D:\Nazari\Git\VideoTrimmer\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger6794450121615845153.xml:7:5-9:19
+19        android:allowBackup="false"
+19-->[__tested_artifact__::] D:\Nazari\Git\VideoTrimmer\build\intermediates\library_manifest\debug\AndroidManifest.xml:13:18-45
+20        android:appComponentFactory="android.support.v4.app.CoreComponentFactory"
+20-->[com.android.support:support-compat:28.0.0] C:\Users\a.nazari\.gradle\caches\transforms-2\files-2.1\bafa4501d92c005acbf8d87a42ead4df\support-compat-28.0.0\AndroidManifest.xml:22:18-91
+21        android:debuggable="true" >
+21-->D:\Nazari\Git\VideoTrimmer\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger6794450121615845153.xml:7:18-43
+22        <uses-library android:name="android.test.runner" />
+22-->D:\Nazari\Git\VideoTrimmer\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger6794450121615845153.xml:8:9-60
+22-->D:\Nazari\Git\VideoTrimmer\build\intermediates\tmp\manifest\androidTest\debug\manifestMerger6794450121615845153.xml:8:23-57
+23    </application>
+24
+25</manifest>

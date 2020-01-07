@@ -557,6 +557,10 @@ public class K4LVideoTrimmer extends FrameLayout {
      */
     @SuppressWarnings("unused")
     public void setVideoURI(final Uri videoURI) {
+        if (videoURI == null){
+            if (mOnTrimVideoListener != null) mOnTrimVideoListener.onError("Uri is null");
+            return;
+        }
         mSrc = videoURI;
 
         if (mOriginSizeFile == 0) {
