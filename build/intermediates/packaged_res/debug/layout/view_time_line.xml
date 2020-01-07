@@ -95,7 +95,7 @@
           android:layout_width="0dp"
           android:layout_height="wrap_content"
           android:layout_weight="1"
-          android:background="@drawable/black_button_background"
+          android:background="@android:color/black"
           android:text="@string/cancel"
           android:textColor="@android:color/white"
           />
@@ -113,7 +113,7 @@
           android:layout_width="0dp"
           android:layout_height="wrap_content"
           android:layout_weight="1"
-          android:background="@drawable/black_button_background"
+          android:background="@android:color/black"
           android:text="@string/save"
           android:textColor="@android:color/white"
           />

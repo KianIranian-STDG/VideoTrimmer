@@ -44,10 +44,12 @@ import android.widget.RelativeLayout;
 import android.widget.SeekBar;
 import android.widget.TextView;
 import android.widget.VideoView;
+
 import java.io.File;
 import java.lang.ref.WeakReference;
 import java.util.ArrayList;
 import java.util.List;
+
 import life.knowledge4.videotrimmer.interfaces.OnK4LVideoListener;
 import life.knowledge4.videotrimmer.interfaces.OnProgressVideoListener;
 import life.knowledge4.videotrimmer.interfaces.OnRangeSeekBarListener;
@@ -110,17 +112,17 @@ public class K4LVideoTrimmer extends FrameLayout {
     private void init(Context context) {
         LayoutInflater.from(context).inflate(R.layout.view_time_line, this, true);
 
-        mHolderTopView = ((SeekBar) findViewById(R.id.handlerTop));
-        mVideoProgressIndicator = ((ProgressBarView) findViewById(R.id.timeVideoView));
-        mRangeSeekBarView = ((RangeSeekBarView) findViewById(R.id.timeLineBar));
-        mLinearVideo = ((RelativeLayout) findViewById(R.id.layout_surface_view));
-        mVideoView = ((VideoView) findViewById(R.id.video_loader));
-        mPlayView = ((ImageView) findViewById(R.id.icon_video_play));
+        mHolderTopView = findViewById(R.id.handlerTop);
+        mVideoProgressIndicator = findViewById(R.id.timeVideoView);
+        mRangeSeekBarView = findViewById(R.id.timeLineBar);
+        mLinearVideo = findViewById(R.id.layout_surface_view);
+        mVideoView = findViewById(R.id.video_loader);
+        mPlayView = findViewById(R.id.icon_video_play);
         mTimeInfoContainer = findViewById(R.id.timeText);
-        mTextSize = ((TextView) findViewById(R.id.textSize));
-        mTextTimeFrame = ((TextView) findViewById(R.id.textTimeSelection));
-        mTextTime = ((TextView) findViewById(R.id.textTime));
-        mTimeLineView = ((TimeLineView) findViewById(R.id.timeLineView));
+        mTextSize = findViewById(R.id.textSize);
+        mTextTimeFrame = findViewById(R.id.textTimeSelection);
+        mTextTime = findViewById(R.id.textTime);
+        mTimeLineView = findViewById(R.id.timeLineView);
 
         setUpListeners();
         setUpMargins();
@@ -129,86 +131,102 @@ public class K4LVideoTrimmer extends FrameLayout {
     private void setUpListeners() {
         mListeners = new ArrayList<>();
         mListeners.add(new OnProgressVideoListener() {
-            @Override public void updateProgress(int time, int max, float scale) {
+            @Override
+            public void updateProgress(int time, int max, float scale) {
                 updateVideoProgress(time);
             }
         });
         mListeners.add(mVideoProgressIndicator);
 
         findViewById(R.id.btCancel).setOnClickListener(new OnClickListener() {
-            @Override public void onClick(View view) {
+            @Override
+            public void onClick(View view) {
                 onCancelClicked();
             }
         });
 
         findViewById(R.id.btSave).setOnClickListener(new OnClickListener() {
-            @Override public void onClick(View view) {
+            @Override
+            public void onClick(View view) {
                 onSaveClicked();
             }
         });
 
         final GestureDetector gestureDetector = new GestureDetector(getContext(), new GestureDetector.SimpleOnGestureListener() {
-            @Override public boolean onSingleTapConfirmed(MotionEvent e) {
+            @Override
+            public boolean onSingleTapConfirmed(MotionEvent e) {
                 onClickVideoPlayPause();
                 return true;
             }
         });
 
         mVideoView.setOnErrorListener(new MediaPlayer.OnErrorListener() {
-            @Override public boolean onError(MediaPlayer mediaPlayer, int what, int extra) {
-                if (mOnTrimVideoListener != null) mOnTrimVideoListener.onError("Something went wrong reason : " + what);
+            @Override
+            public boolean onError(MediaPlayer mediaPlayer, int what, int extra) {
+                if (mOnTrimVideoListener != null)
+                    mOnTrimVideoListener.onError("Something went wrong reason : " + what);
                 return false;
             }
         });
 
         mVideoView.setOnTouchListener(new View.OnTouchListener() {
-            @Override public boolean onTouch(View v, @NonNull MotionEvent event) {
+            @Override
+            public boolean onTouch(View v, @NonNull MotionEvent event) {
                 gestureDetector.onTouchEvent(event);
                 return true;
             }
         });
 
         mRangeSeekBarView.addOnRangeSeekBarListener(new OnRangeSeekBarListener() {
-            @Override public void onCreate(RangeSeekBarView rangeSeekBarView, int index, float value) {
+            @Override
+            public void onCreate(RangeSeekBarView rangeSeekBarView, int index, float value) {
                 // Do nothing
             }
 
-            @Override public void onSeek(RangeSeekBarView rangeSeekBarView, int index, float value) {
+            @Override
+            public void onSeek(RangeSeekBarView rangeSeekBarView, int index, float value) {
                 onSeekThumbs(index, value);
             }
 
-            @Override public void onSeekStart(RangeSeekBarView rangeSeekBarView, int index, float value) {
+            @Override
+            public void onSeekStart(RangeSeekBarView rangeSeekBarView, int index, float value) {
                 // Do nothing
             }
 
-            @Override public void onSeekStop(RangeSeekBarView rangeSeekBarView, int index, float value) {
+            @Override
+            public void onSeekStop(RangeSeekBarView rangeSeekBarView, int index, float value) {
                 onStopSeekThumbs();
             }
         });
         mRangeSeekBarView.addOnRangeSeekBarListener(mVideoProgressIndicator);
 
         mHolderTopView.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
-            @Override public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
+            @Override
+            public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
                 onPlayerIndicatorSeekChanged(progress, fromUser);
             }
 
-            @Override public void onStartTrackingTouch(SeekBar seekBar) {
+            @Override
+            public void onStartTrackingTouch(SeekBar seekBar) {
                 onPlayerIndicatorSeekStart();
             }
 
-            @Override public void onStopTrackingTouch(SeekBar seekBar) {
+            @Override
+            public void onStopTrackingTouch(SeekBar seekBar) {
                 onPlayerIndicatorSeekStop(seekBar);
             }
         });
 
         mVideoView.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
-            @Override public void onPrepared(MediaPlayer mp) {
+            @Override
+            public void onPrepared(MediaPlayer mp) {
                 onVideoPrepared(mp);
             }
         });
 
         mVideoView.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
-            @Override public void onCompletion(MediaPlayer mp) {
+            @Override
+            public void onCompletion(MediaPlayer mp) {
                 onVideoCompleted();
             }
         });
@@ -257,12 +275,13 @@ public class K4LVideoTrimmer extends FrameLayout {
             if (mOnTrimVideoListener != null) mOnTrimVideoListener.onTrimStarted();
 
             BackgroundExecutor.execute(new BackgroundExecutor.Task("", 0L, "") {
-                @Override public void execute() {
+                @Override
+                public void execute() {
                     try {
                         TrimVideoUtils.startTrim(file, getDestinationPath(), mStartPosition, mEndPosition, mOnTrimVideoListener);
                     } catch (final Throwable e) {
                         //Thread.getDefaultUncaughtExceptionHandler().uncaughtException(Thread.currentThread(), e);
-                        if (mOnTrimVideoListener != null){
+                        if (mOnTrimVideoListener != null) {
                             mOnTrimVideoListener.onError("Can not trim video :  " + e);
                         }
                     }
@@ -485,7 +504,8 @@ public class K4LVideoTrimmer extends FrameLayout {
      *
      * @param onTrimVideoListener interface for events
      */
-    @SuppressWarnings("unused") public void setOnTrimVideoListener(OnTrimVideoListener onTrimVideoListener) {
+    @SuppressWarnings("unused")
+    public void setOnTrimVideoListener(OnTrimVideoListener onTrimVideoListener) {
         mOnTrimVideoListener = onTrimVideoListener;
     }
 
@@ -494,7 +514,8 @@ public class K4LVideoTrimmer extends FrameLayout {
      *
      * @param onK4LVideoListener interface for events
      */
-    @SuppressWarnings("unused") public void setOnK4LVideoListener(OnK4LVideoListener onK4LVideoListener) {
+    @SuppressWarnings("unused")
+    public void setOnK4LVideoListener(OnK4LVideoListener onK4LVideoListener) {
         mOnK4LVideoListener = onK4LVideoListener;
     }
 
@@ -504,7 +525,8 @@ public class K4LVideoTrimmer extends FrameLayout {
      *
      * @param finalPath the full path
      */
-    @SuppressWarnings("unused") public void setDestinationPath(final String finalPath) {
+    @SuppressWarnings("unused")
+    public void setDestinationPath(final String finalPath) {
         mFinalPath = finalPath;
         Log.d(TAG, "Setting custom path " + mFinalPath);
     }
@@ -523,7 +545,8 @@ public class K4LVideoTrimmer extends FrameLayout {
      *
      * @param maxDuration the maximum duration of the trimmed video in seconds
      */
-    @SuppressWarnings("unused") public void setMaxDuration(int maxDuration) {
+    @SuppressWarnings("unused")
+    public void setMaxDuration(int maxDuration) {
         mMaxDuration = maxDuration * 1000;
     }
 
@@ -532,7 +555,8 @@ public class K4LVideoTrimmer extends FrameLayout {
      *
      * @param videoURI Uri of the video
      */
-    @SuppressWarnings("unused") public void setVideoURI(final Uri videoURI) {
+    @SuppressWarnings("unused")
+    public void setVideoURI(final Uri videoURI) {
         mSrc = videoURI;
 
         if (mOriginSizeFile == 0) {
@@ -557,13 +581,15 @@ public class K4LVideoTrimmer extends FrameLayout {
 
     private static class MessageHandler extends Handler {
 
-        @NonNull private final WeakReference<K4LVideoTrimmer> mView;
+        @NonNull
+        private final WeakReference<K4LVideoTrimmer> mView;
 
         MessageHandler(K4LVideoTrimmer view) {
             mView = new WeakReference<>(view);
         }
 
-        @Override public void handleMessage(Message msg) {
+        @Override
+        public void handleMessage(Message msg) {
             K4LVideoTrimmer view = mView.get();
             if (view == null || view.mVideoView == null) {
                 return;
